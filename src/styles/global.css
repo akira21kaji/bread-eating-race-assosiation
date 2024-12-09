@@ -1,0 +1,7 @@
+html {
+  background-image: url(../assets/bgimage.svg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Noto Serif JP", serif;
+  color: #4d3a3f;
+}
