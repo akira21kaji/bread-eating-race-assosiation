@@ -17,22 +17,26 @@ import Title from "./Title.astro";
 import "../styles/global.css";
 ---
 
-  <div class="flex flex-col items-center justify-center w-820">
+<div class="flex justify-center w-full">
+
+  <div class="flex flex-col items-center justify-center container">
     <Title subtitle="THE HISTORY" title="パン食い競争の歴史" />
-    <article class="flex w-full items-strech justify-center relative">
-      <div class="w-1/4 relative top-10">
-        <Image src={Meiji} alt="明治" class="w-100% relative top-0 z-10"/>
-        <Image src={MeijiImage} alt="明治のパン食い競争の風景" class="w-100% relative bottom-10 left-10 z-0"/>
+
+    <article class="flex justify-center">
+      <div class="grow-1 relative">
+        <Image src={Meiji} alt="明治" width={20} height={20}  class="absolute top-10"/>
+        <Image src={MeijiImage} alt="明治のパン食い競争の風景" width={20} height={20} class="absolute "/>
       </div>
-      <div class="">
-        <Image src={Image1874} alt="1874" class="w-100% h-auto" />
+      <div class="grow-3">
+        <Image src={Image1874} alt="1874" class="" />
       </div>
-      <div class="w-1/4 max-w-[380px] text-base leading-relaxed relative top-24 left-2">
+      <div class="grow-1">
         <p>
           東京築地の海軍兵学校で「競闘遊戯会」が開催。このイベントで木村屋總本店の「あんぱん」が競技に使用された説があり、これがパン食い競走のルーツとされる。
         </p>
       </div>
     </article>
+
     <article class="flex w-full h-250 justify-center relative">
       <div class="w-1/4 max-w-[380px] h-auto text-base leading-relaxed relative top-24 left-2">
         <p>
@@ -51,6 +55,7 @@ import "../styles/global.css";
         </p>
       </div>
     </article>
+
     <article class="flex w-full items-strech justify-center relative">
       <div class="w-1/4">
         <Image src={Heisei} alt="平成" class="w-260 relative bottom-14 z-0"/>
@@ -65,6 +70,7 @@ import "../styles/global.css";
         <Image src={HeiseiImage} alt="平成のパン食い競争の風景" class="w-260 relative bottom-10 left-20"/>
       </div>
     </article>
+
     <article class="flex w-full items-strech justify-center relative">
       <div class="w-1/4 relative top-10">
         <p>
@@ -78,7 +84,10 @@ import "../styles/global.css";
         <Image src={Reiwa} alt="令和" class="w-260 absolute bottom-0 right-0 z-10"/>
       </div>
     </article>
+
     <article class="flex w-full items-strech justify-center relative mb-100">
       <Image src={Photo} alt="写真" class="w-100 h-auto" />
     </article>
   </div>
+
+</div>
