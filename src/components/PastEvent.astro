@@ -1,4 +1,24 @@
-<div>
-  <h2>パン食い競争協会 Past Event</h2>
-  <img src="/images/past-event.jpg" alt="パン食い競争協会 Past Event">
+---
+import { Image } from "astro:assets";
+import { getPastEvents } from "../lib/microcms";
+import Title from "./Title.astro";
+const res = await getPastEvents();
+---
+<div class="flex justify-center w-full">
+  <div class="flex flex-col items-center justify-center container">
+    <Title subtitle="PAST EVENT" title="開催実績" />
+    <!-- <p>{res.contents.map((content:any) => content.title)}</p> -->
+    <div class="flex flex-col justify-center">
+      {res.contents.map((content: any) => (
+        <div class="flex items-center justify-center">
+          <Image src={content.image.url} alt={content.title} width={220} height={220} />
+          <h2>{content.title}</h2>
+          <p>{content.sponsored}</p>
+          <p>{content.date}</p>
+          <p>{content.field}</p>
+          <div set:html={content.content}></div>
+        </div>
+      ))}
+    </div>
+  </div>
 </div>
