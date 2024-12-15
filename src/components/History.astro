@@ -17,22 +17,23 @@ import Title from "./Title.astro";
 import "../styles/global.css";
 ---
 
-  <div class="flex flex-col items-center justify-center w-820">
-    <Title subtitle="THE HISTORY" title="パン食い競争の歴史" />
-    <article class="flex w-full items-strech justify-center relative">
-      <div class="w-1/4 relative top-10">
-        <Image src={Meiji} alt="明治" class="w-100% relative top-0 z-10"/>
-        <Image src={MeijiImage} alt="明治のパン食い競争の風景" class="w-100% relative bottom-10 left-10 z-0"/>
-      </div>
-      <div class="">
-        <Image src={Image1874} alt="1874" class="w-100% h-auto" />
-      </div>
-      <div class="w-1/4 max-w-[380px] text-base leading-relaxed relative top-24 left-2">
-        <p>
-          東京築地の海軍兵学校で「競闘遊戯会」が開催。このイベントで木村屋總本店の「あんぱん」が競技に使用された説があり、これがパン食い競走のルーツとされる。
-        </p>
-      </div>
-    </article>
+<div class="flex justify-center">
+	<div class="container flex flex-col items-center bg-gray-100">
+		<Title subtitle="THE HISTORY" title="パン食い競争の歴史" />
+		<article class="flex justify-center">
+			<div class="flex flex-1 flex-col items-end justify-center">
+				<Image src={Meiji} alt="明治" class="relative right-28 top-10" />
+				<Image src={MeijiImage} alt="明治のパン食い競争の風景" class="" />
+			</div>
+			<div>
+				<Image src={Image1874} alt="1874" class="h-auto" />
+			</div>
+			<div class="flex flex-1 items-center pb-10 text-base">
+				<p>
+					東京築地の海軍兵学校で「競闘遊戯会」が開催。このイベントで木村屋總本店の「あんぱん」が競技に使用された説があり、これがパン食い競走のルーツとされる。
+				</p>
+			</div>
+		</article>
     <article class="flex w-full h-250 justify-center relative">
       <div class="w-1/4 max-w-[380px] h-auto text-base leading-relaxed relative top-24 left-2">
         <p>
@@ -82,3 +83,4 @@ import "../styles/global.css";
       <Image src={Photo} alt="写真" class="w-100 h-auto" />
     </article>
   </div>
+</div>
