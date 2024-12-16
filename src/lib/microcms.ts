@@ -17,10 +17,21 @@ export type pastEvent = {
   image: string;
 } & MicroCMSListContent;
 
+export type pastEventPhoto = {
+  images: string;
+} & MicroCMSListContent;
+
 // APIの呼び出し
 export const getPastEvents = async (queries?: MicroCMSQueries) => {
   return await client.getList<pastEvent>({
     endpoint: "past-event",
+    queries,
+  });
+};
+
+export const getPastEventPhoto = async (queries?: MicroCMSQueries) => {
+  return await client.getList<pastEventPhoto>({
+    endpoint: "past-event-photo",
     queries,
   });
 };
