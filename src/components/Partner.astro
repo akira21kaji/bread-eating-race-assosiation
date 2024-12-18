@@ -1,3 +1,46 @@
+---
+import Title from "./Title.astro";
+import { getPartnerContents } from "../lib/microcms";
+import { Image } from "astro:assets";
+const res = await getPartnerContents();
+---
 <div>
-  <h2>パン食い競争協会 Partner</h2>
+  <section class="flex flex-col items-center justify-center mt-40">
+    <Title subtitle="PARTNERSHIP" title="パートナーシップ" />
+    <article class="flex flex-col items-center justify-center mt-10 gap-8">
+      <div class="flex flex-col items-center justify-center gap-2">
+        <h1 class="text-2xl font-medium p-4">ゴールドパートナー</h1>
+        <div class="grid grid-cols-2 gap-10">
+          {res.contents.filter((content: any) => content.type === "ゴールド").map((content: any) => (
+            <div class="flex flex-col items-center justify-end">
+              <Image src={content.logo.url + "?fit=clip&w=320"} alt="寄付の取り組み" width="320" height="100" />
+              <p>{content.company}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2">
+        <h1 class="text-2xl font-medium p-4">シルバーパートナー</h1>
+        <div class="grid grid-cols-3 gap-8">
+          {res.contents.filter((content: any) => content.type === "シルバー").map((content: any) => (
+            <div class="flex flex-col items-center justify-end">
+              <Image src={content.logo.url + "?fit=clip&w=180"} alt="寄付の取り組み" width="180" height="180" />
+              <p>{content.company}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2">
+        <h1 class="text-2xl font-medium p-4">ブロンズパートナー</h1>
+        <div class="grid grid-cols-4 gap-4">
+          {res.contents.filter((content: any) => content.type === "ブロンズ").map((content: any) => (
+            <div class="flex flex-col items-center justify-end">
+              <Image src={content.logo.url + "?fit=clip&w=140"} alt="寄付の取り組み" width="140" height="140" />
+              <p>{content.company}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </article>
+  </section>
 </div>
