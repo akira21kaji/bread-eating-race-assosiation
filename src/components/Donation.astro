@@ -1,23 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import DonationImage from "../assets/history_assets/MeijiImage.svg";
+import { getDonationPhoto } from "../lib/microcms";
+const res = await getDonationPhoto();
 ---
 
 <div class="donation-container">
-  <article class="flex flex-col items-center justify-center p-8">
+  <article class="flex flex-col items-center justify-center py-32 px-12">
     <div class="title-container">
       <p class="subtitle">DONATION</p>
       <h1 class="title">寄付の取り組み</h1>
     </div>
     <div class="flex flex-col items-center justify-center gap-8">
       <p class="text-xl font-thin text-white">走った分だけ開催地域の子ども食堂にパンを寄付します。</p>
-      <div class="w-2/3 grid grid-cols-3 gap-4">
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
-        <Image src={DonationImage} alt="寄付の取り組み" width="300" height="300 "/>
+      <div class="grid grid-cols-3 gap-3 p-4">
+        {res.images.map((image: any) => (
+          <Image src={image.url + "?w=350&h=350&fit=crop"} alt="寄付の取り組み" width="350" height="350" />
+        ))}
       </div>
     </div>
   </article>

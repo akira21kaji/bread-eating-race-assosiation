@@ -14,11 +14,20 @@ export type pastEvent = {
   date: string;
   field: string;
   content: string;
-  image: string;
+  image: {
+    url: string;
+  }[];
 } & MicroCMSListContent;
 
 export type pastEventPhoto = {
-  images: string;
+  images: {
+    url: string;
+  }[];
+} & MicroCMSListContent;
+
+export type partnership = {
+  company: string;
+  logo: string;
 } & MicroCMSListContent;
 
 // APIの呼び出し
@@ -30,8 +39,24 @@ export const getPastEvents = async (queries?: MicroCMSQueries) => {
 };
 
 export const getPastEventPhoto = async (queries?: MicroCMSQueries) => {
-  return await client.getList<pastEventPhoto>({
+  return await client.getListDetail<pastEventPhoto>({
     endpoint: "past-event-photo",
+    contentId: "past-event",
+    queries,
+  });
+};
+
+export const getDonationPhoto = async (queries?: MicroCMSQueries) => {
+  return await client.getListDetail<pastEventPhoto>({
+    endpoint: "past-event-photo",
+    contentId: "donation",
+    queries,
+  });
+};
+
+export const getPartnerContents = async (queries?: MicroCMSQueries) => {
+  return await client.getList<partnership>({
+    endpoint: "partnership",
     queries,
   });
 };
