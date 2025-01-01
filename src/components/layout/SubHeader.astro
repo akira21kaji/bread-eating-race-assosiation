@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/logo.svg";
+---
+
+<header class="hidden sm:flex justify-between items-center w-full h-24">
+  <div class="pl-16">
+    <a href="/" class="flex items-center gap-4">
+      <Image src={logo} alt="logo" class="w-16 h-16"/>
+      <h1 class="text-left text-lg font-bold tracking-wider">一般社団法人<br>パン食い競走協会<span class="text-xs font-normal tracking-wider">(設立準備中)</span></h1>
+    </a>
+  </div>
+  <div class="flex items-center gap-4 pr-20">
+    <a href="/about" class="text-sm font-bold tracking-wide">協会について</a>
+    <p>|</p>
+    <a href="/rule" class="text-sm font-bold tracking-wide">開催までの流れ</a>
+    <p>|</p>
+    <a href="/contact" class="text-sm font-bold tracking-wide">お問い合わせ</a>
+  </div>
+</header>

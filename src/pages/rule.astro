@@ -1,0 +1,196 @@
+---
+import Title from "../components/component/Title.astro";
+import SubHeader from "../components/layout/SubHeader.astro";
+import Layout from "../layouts/Layout.astro";
+import {Image} from "astro:assets";
+import rental from "../assets/rule/rental.png"
+import manual from "../assets/rule/manual.png"
+import woman from "../assets/rule/woman_image.webp"
+import trophy from "../assets/rule/Trophy_image.webp"
+---
+
+<Layout>
+  <SubHeader />
+  <section class="w-full">
+    <div class="flex flex-col justify-center items-center bg-rule-bg bg-cover bg-center w-full h-96 gap-10">
+      <h1 class="text-center text-5xl font-bold text-white tracking-widest">開催までの流れ</h1>
+      <p class="text-center text-sm text-white">ぱん食い競走を開催したい主催者と連携し<br>
+        パン食い競走の輪を広げていきます。</p>
+    </div>
+  </section>
+
+  <section class="flex flex-col items-center pt-20">
+    <Title subtitle="OFFICIAL RULE" title="開催方法" />
+    <p class="text-center pt-8 hidden sm:block">競技用具貸出型とナレッジ共有型の2つから選択可能です。</p>
+    <p class="text-center pt-8 block sm:hidden">競技用具貸出型とナレッジ共有型の<br>2つから選択可能です。</p>
+
+    <article class="flex flex-col items-center pt-20 pb-10 sm:px-20 px-5 gap-10">
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-5 border border-border-brown pb-10 sm:p-0">
+        <div class="sm:w-1/2 w-full">
+          <Image src={rental} alt="rental" width="520" height="320"/>
+        </div>
+        <div class="flex flex-col gap-4 sm:w-1/2 w-full sm:px-10 px-5">
+          <div class="flex gap-5 pb-5">
+            <div class="flex justify-center items-center bg-button-orange text-white px-2 py-1">
+              <p class="font-sans text-xs">有料プラン</p>
+            </div>
+            <h3 class="text-2xl font-bold">競技用具貸出型</h3>
+          </div>
+          <p class="font-sans text-sm pb-2">ぱん食い競走を開催するために必要な用具一式のお貸出しや競技用ぱんを手配することで、手軽にぱん食い競走を主催できます。</p>
+          <p class="font-sans text-sm border-b-2 border-border-brown pb-1">貸出用具</p>
+          <p class="font-sans text-sm">ぱん食い競走用棒1セット、競技用パン最大400個<br>
+            ストップウォッチ4個、エアホーン1個、記録証データ<br>
+            ホワイトボード1個、音楽機材1個、パントロフィー1個</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-5 border border-border-brown pb-10 sm:p-0">
+        <div class="sm:w-1/2 w-full">
+          <Image src={manual} alt="rental" width="520" height="320"/>
+        </div>
+        <div class="flex flex-col gap-4 sm:w-1/2 w-full sm:px-10 px-5">
+          <div class="flex gap-5 pb-5">
+            <div class="flex justify-center items-center bg-button-orange text-white px-2 py-1">
+              <p class="font-sans text-xs">有料プラン</p>
+            </div>
+            <h3 class="text-2xl font-bold">マニュアル共有型</h3>
+          </div>
+          <p class="font-sans text-sm pb-2">ぱん食い競走の準備物やスケジュールがまとまったナレッジマニュアルを共有することで、ぱん食い競走の主催をサポートします。</p>
+          <p class="font-sans text-sm border-b-2 border-border-brown pb-1">ナレッジマニュアルの内容</p>
+          <p class="font-sans text-sm">組織図、タイムテーブル、会場マップ、必要備品一覧<br>
+            競技の運用ルール、運営の流れ</p>
+        </div>
+      </div>
+    </article>
+
+    <h1 class="text-5xl font-bold">＋</h1>
+
+    <article class="pt-10 pb-20 sm:px-20 px-5 flex flex-col items-start gap-10">
+      <div class="p-5 sm:p-20 border border-border-brown">
+        <div class="flex flex-col items-start gap-5 pb-10">
+          <h1 class="text-2xl font-bold">サポートオプション</h1>
+          <p class="text-base">主催者の状況に合わせて様々なサポートオプションを用意しています。</p>
+        </div>
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-5">
+          <div class="flex flex-col items-start gap-5 border border-border-brown py-5 px-8">
+            <h3 class="text-base font-bold border-b-2 border-border-brown w-full pb-1">企画進行支援</h3>
+            <p class="text-base font-sans">開催経験豊富なディレクターが開催までチャットやお打ち合わせでのフォローアップを行います。</p>
+          </div>
+          <div class="flex flex-col items-start gap-5 border border-border-brown py-5 px-8">
+            <h3 class="text-base font-bold border-b-2 border-border-brown w-full pb-1">スタッフ派遣</h3>
+            <p class="text-base font-sans">競技時のぱんの付替え作業を対応するぱんスタッフを木村屋總本店の社員から派遣します。</p>
+          </div>
+          <div class="flex flex-col items-start gap-5 border border-border-brown py-5 px-8">
+            <h3 class="text-base font-bold border-b-2 border-border-brown w-full pb-1">MC派遣</h3>
+            <p class="text-base font-sans">開会式から競技中にもイベント全体を盛り上げるスポーツイベントMCを派遣します。</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <Image src={woman} alt="woman" class="sm:w-full max-w-[600px] sm:max-w-none object-cover sm:object-none" />
+
+    <article class="flex flex-col items-center py-20">
+      <Title subtitle="OFFICIAL RULE" title="開催の流れ" />
+      <p class="text-center text-lg py-8 hidden sm:block">要望や座組によって進め方は柔軟に変更可能です。</p>
+      <p class="text-center text-lg py-8 block sm:hidden">要望や座組によって進め方は<br>柔軟に変更可能です。</p>
+        <ol class="text-lg relative px-10">
+          <li class="font-bold text-base pb-2 relative">お問い合わせ</li>
+          <span class="absolute top-[1%] left-[2.25%] w-[2px] h-[88%] bg-button-orange"></span>
+          <span class="absolute top-[1%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">ホームページ内の問い合わせフォームから必要な情報を入力して送信。</p>
+          <li class="font-bold text-base pb-2">オンラインMTG</li>
+          <span class="absolute top-[15%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">ぱん食い競走の概要説明や主催者の要件をすり合わせ、開催可否をご検討。</p>
+          <li class="font-bold text-base pb-2">実施確定</li>
+          <span class="absolute top-[30%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">オンラインMTGの内容を踏まえて主催者側で開催可否を確定。</p>
+          <li class="font-bold text-base pb-2">マニュアル受取</li>
+          <span class="absolute top-[44%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">ぱん食い競走を行うための運営マニュアルを受取り準備を始める。</p>
+          <li class="font-bold text-base pb-2">用具一式の受取</li>
+          <span class="absolute top-[58.5%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">開催の1〜3日前頃に用具一式を受取り設営を行う。</p>
+          <li class="font-bold text-base pb-2">ぱん食い競走開催</li>
+          <span class="absolute top-[72.5%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">みんなで協力しながら運営を行い、ぱん食い競走を楽しむ。</p>
+          <li class="font-bold text-base pb-2">パンの寄付</li>
+          <span class="absolute top-[87%] left-[1%] w-4 h-4 bg-button-orange rounded-full"></span>
+          <p class="text-sm pb-5">ぱん食い競走の参加人数分のぱんを地元のこども食堂に寄付する。</p>
+        </ol>
+    </article>
+
+    <article class="flex flex-col items-center py-20 bg-brown-900 w-full">
+      <div class="title-container pb-20">
+        <p class="subtitle">QUESTION</p>
+        <h1 class="title">よくある質問</h1>
+      </div>
+      <div class="flex flex-col items-start gap-5 text-white px-10 sm:px-0">
+        <p class="question">
+          <span class="font-bold pr-5">Q</span>
+          主催する際に運営にはどれくらいの人数が必要ですか？</p>
+          <p class="answer">
+          <span class="font-bold pr-5">A</span>
+          5〜10名程になります。会場の状況やルールによって変動します。</p>
+          <p class="question">
+          <span class="font-bold pr-5">Q</span>
+          レースの所要時間はどれくらいですか？</p>
+          <p class="answer">
+          <span class="font-bold pr-5">A</span>
+          1レース4名が同時に走り、記録証の記載まで含めて約1分で実施できます。</p>
+          <p class="question">
+          <span class="font-bold pr-5">Q</span>
+          イベントの保険加入は必要ですか？</p>
+          <p class="answer">
+          <span class="font-bold pr-5">A</span>
+          1日単位で加入可能なイベント保険等への加入を推奨しています。</p>
+          <p class="question">
+          <span class="font-bold pr-5">Q</span>
+          衛生面でどんな対応が必要ですか？</p>
+          <p class="answer">
+          <span class="font-bold pr-5">A</span>
+          食品を扱うため衛生管理者を立て保健所への確認が必要になります。</p>
+          <p class="question">
+          <span class="font-bold pr-5">Q</span>
+          ぱんトロフィーは食べられますか？</p>
+          <p class="answer">
+          <span class="font-bold pr-5">A</span>
+          ぱんでできていますが、食べることはできません。</p>
+      </div>
+    </article>
+
+    <Image src={trophy} alt="trophy" class="sm:w-full max-w-[600px] sm:max-w-none object-cover sm:object-none" />
+  </section>
+</Layout>
+
+<style>
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 14px;
+  }
+  
+    .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .title {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+  }
+</style>

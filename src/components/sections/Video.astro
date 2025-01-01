@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import womanRun from "../../assets/woman_run.webp";
+import womanRunSm from "../../assets/woman_run_sm.webp";
+---
+
+<!-- <video src="/video/bread-eating-race.mp4" autoplay loop muted></video> -->
+ <section class="sm:flex sm:justify-center sm:my-16 hidden ">
+  <Image src={womanRun} alt="パン食い競走"/>
+ </section>
+
+ <section class="sm:hidden flex justify-center my-16">
+  <Image src={womanRunSm} alt="パン食い競走" class="w-full"/>
+ </section>

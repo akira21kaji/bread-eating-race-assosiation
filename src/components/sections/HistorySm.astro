@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import Image2024 from "../../assets/history_assets/2024.svg"
+import Meiji from "../../assets/history_assets/Meiji.svg";
+import MeijiImage from "../../assets/history_assets/meiji_image.webp";
+import Showa from "../../assets/history_assets/Showa.svg"
+import ShowaImage from "../../assets/history_assets/showa_image.webp"
+import Heisei from "../../assets/history_assets/Heisei.svg"
+import HeiseiImage from "../../assets/history_assets/heisei_image.webp"
+import Reiwa from "../../assets/history_assets/Reiwa.svg"
+import BreadImage from "../../assets/history_assets/bread_image.webp"
+import man from "../../assets/history_assets/man_run.webp"
+import Title from "../component/Title.astro";
+import "../../styles/global.css";
+---
+
+<div class="flex flex-col items-center sm:hidden w-full p-5">
+
+  <div class="flex flex-col items-center justify-center">
+    <Title subtitle="THE HISTORY" title="ぱん食い競走の歴史" />
+
+    <article class="flex flex-col justify-center w-full py-5 gap-5">
+      <ol class="border-l-2 border-border-brown pl-[2.35rem] list-disc marker:text-5xl">
+        <li class="relative right-2">
+          <p class="font-almendra font-bold text-6xl py-5">1874</p>
+          <div class="flex flex-1 flex-col items-end justify-center pb-10">
+            <Image src={Meiji} alt="明治" width="100" height="100" class="relative right-0 top-5"/>
+            <Image src={MeijiImage} alt="明治のぱん食い競走の風景" width="400" height="400" class="w-full"/>
+          </div>
+          <p class="font-light text-xl w-full leading-relaxed">
+            東京築地の海軍兵学校で「競闘遊戯会」が開催。このイベントで木村屋總本店の「あんぱん」が競技に使用された説があり、これがぱん食い競走のルーツとされる。
+          </p>
+        </li>
+        <li class="relative right-2">
+          <p class="font-almendra font-bold text-6xl py-5">1896</p>      
+          <p class="font-light text-xl w-full leading-relaxed">
+            北海道札幌農学校（現・北海道大学）で「食菓競争」としてぱん食い競走が行われる。木村屋總本店のあんぱんが使われていたと伝えられ、これも起源の一つに位置付けられる。
+          </p>
+          <div class="flex flex-col items-center">
+            <Image src={Showa} alt="昭和" width="100" height="100" class="relative top-5 left-24"/>
+            <Image src={ShowaImage} alt="昭和のパン食い競争の風景" width="400" height="400" class="w-[80%]"/>
+          </div>
+        </li>
+        <li class="relative right-2">
+          <p class="font-almendra font-bold text-6xl py-5">1926-1986</p>
+          <p class="font-light text-xl w-full leading-relaxed pb-5">
+            戦後、学校行事や地域イベントとして広まり、定番競技に。木村屋のあんぱんは庶民に親しまれ、ぱん食い競走の代表的な競技アイテムとなった。
+          </p>
+        </li>
+        <li class="relative right-2">
+          <p class="font-almendra font-bold text-6xl py-5">2000-</p>
+          <div class="flex flex-col items-center pb-5">
+            <Image src={Heisei} alt="平成" width="100" height="100" class="relative top-5 left-24"/>
+            <Image src={HeiseiImage} alt="平成のパン食い競争の風景" width="400" height="400" class="w-[80%]"/>
+          </div>
+          <p class="font-light text-xl w-full leading-relaxed">
+            アレルギーや衛生面の観点から包装済みパンの使用が増加し、地域や学校で独自のパンが用意されるケースも増える。
+          </p>
+        </li>
+        <li class="relative right-2">
+          <p class="font-almendra font-bold text-6xl py-5">2024</p>
+        </li>
+      </ol>
+      
+      <div class="flex flex-1 items-start text-base">
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={Reiwa} alt="令和" width="150" height="150" class="relative top-5 left-24"/>
+        <Image src={man} alt="写真" class="h-auto" width="400" height="400" class="w-full"/>
+      </div>
+      <p class="font-light text-xl w-full leading-relaxed py-5">
+        木村屋總本店と元陸上400mハードルの為末大が出会い、ぱん食い競走の普及と健全な体力づくりの推進を目的に「ぱん食い競走協会」を設立。協会ではパンの種類や安全基準の見直し、イベントの全国展開を図る新たな取り組みが始まる。
+      </p>
+  
+    </div>
+
+</div>
