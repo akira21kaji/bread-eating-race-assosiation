@@ -10,7 +10,7 @@ import point3 from "../../assets/points/point3.webp"
 ---
 
 <section class="w-full">
-  <div class="flex flex-col justify-center items-center bg-main-bg bg-cover bg-center w-full h-auto py-32">
+  <div class="keyframe flex flex-col justify-center items-center bg-cover bg-center w-full h-auto py-32">
     <MainHeader />
     <div class="flex flex-col items-center">
       <Image src={logo_white} alt="logo" width="270" height="270"/>
@@ -52,3 +52,9 @@ import point3 from "../../assets/points/point3.webp"
     </div>
   </article>
 </section>
+
+<style>
+  .keyframe {
+    background-image: url(../../assets/kv/mv_bgimage.webp);
+  }
+</style>

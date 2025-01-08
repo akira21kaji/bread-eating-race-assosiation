@@ -6,11 +6,6 @@ export default {
       fontFamily: {
         almendra: ["Almendra", "sans-serif"],
       },
-      backgroundImage: {
-        "about-bg": "url('./src/assets/assosiation/assosiate.png')",
-        "rule-bg": "url('./src/assets/rule/rule_bgimage.webp')",
-        "main-bg": "url('./src/assets/kv/mv_bgimage.webp')",
-      },
       colors: {
         "brown-900": "#B78A60",
         "border-brown": "#4D3A3F",
