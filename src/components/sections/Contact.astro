@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import Title from "../component/Title.astro";
+import Sponsors from "../../assets/contact/スポンサーの方はこちら.svg"
+import Donations from "../../assets/contact/主催者の方はこちら.svg"
+---
+<section>
+  <article class="flex flex-col items-center justify-center my-24">
+    <Title subtitle="CONTACT" title="お問い合わせ" />
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-10 p-4">
+      <a href="/kamon-crest.co.jp" target="_blank">
+        <Image src={Sponsors} alt="スポンサーの方はこちら" width="510" height="210"/>
+      </a>
+      <a href="/kamon-crest.co.jp" target="_blank">
+        <Image src={Donations} alt="主催者の方はこちら" width="510" height="210"/>
+      </a>
+    </div>
+  </article>
+</section>

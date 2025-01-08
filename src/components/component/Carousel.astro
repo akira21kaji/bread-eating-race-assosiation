@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import { getPastEventPhoto } from "../../lib/microcms";
+
+const res = await getPastEventPhoto();
+---
+<div class="swiper hidden sm:block">
+  <div class="swiper-wrapper max-w-[350px] sm:max-w-[1040px] pb-10">
+  {res.images.map((image: any) => (
+    <div class="swiper-slide">
+      <Image src={image.url + "?w=350&h=350&fit=crop"} alt="past-event-photo" width={350} height={350} />
+    </div>
+))}
+  </div>
+  <div class="swiper-scrollbar max-w-[350px] !left-1/2 transform !-translate-x-1/2" ></div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Scrollbar } from "swiper/modules";
+  import "swiper/css/bundle";
+
+  export const swiperConfig =  {
+    cssMode: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    modules: [Scrollbar],
+    loop: false,
+    speed: 400,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    mousewheel: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+      },
+    },
+  };
+
+  const swiper = new Swiper(".swiper", swiperConfig)
+</script>
+
+<style>
+  .swiper-scrollbar {
+    --swiper-scrollbar-drag-bg-color: #E17A19 !important;
+    --swiper-scrollbar-bg-color: #FFF !important;
+  }
+
+</style>
