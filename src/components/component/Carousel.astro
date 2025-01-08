@@ -5,7 +5,7 @@ import { getPastEventPhoto } from "../../lib/microcms";
 const res = await getPastEventPhoto();
 ---
 <div class="swiper hidden sm:block">
-  <div class="swiper-wrapper max-w-[1040px] pb-10">
+  <div class="swiper-wrapper max-w-[350px] sm:max-w-[1040px] pb-10">
   {res.images.map((image: any) => (
     <div class="swiper-slide">
       <Image src={image.url + "?w=350&h=350&fit=crop"} alt="past-event-photo" width={350} height={350} />
@@ -21,14 +21,20 @@ const res = await getPastEventPhoto();
   import "swiper/css/bundle";
 
   export const swiperConfig =  {
-    slidesPerView: 3,
+    cssMode: true,
+    slidesPerView: 1,
     spaceBetween: 10,
     modules: [Scrollbar],
     loop: false,
     speed: 400,
     scrollbar: {
       el: ".swiper-scrollbar",
-      draggable: true,
+    },
+    mousewheel: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+      },
     },
   };
 
