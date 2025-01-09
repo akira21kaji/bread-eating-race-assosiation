@@ -4,7 +4,7 @@ import { getPastEventPhoto } from "../../lib/microcms";
 
 const res = await getPastEventPhoto();
 ---
-<div class="swiper hidden sm:block">
+<div class="swiper sm:block">
   <div class="swiper-wrapper max-w-[350px] sm:max-w-[1040px] pb-10">
   {res.images.map((image: any) => (
     <div class="swiper-slide">
