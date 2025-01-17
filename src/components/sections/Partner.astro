@@ -5,37 +5,43 @@ import { Image } from "astro:assets";
 const res = await getPartnerContents();
 ---
 <div>
-  <section class="flex flex-col items-center justify-center mt-40">
+  <section class="flex flex-col items-center justify-center">
     <Title subtitle="PARTNERSHIP" title="パートナーシップ" />
     <article class="flex flex-col items-center justify-center mt-10 gap-8">
-      <div class="flex flex-col items-center justify-center gap-2">
-        <h1 class="text-2xl font-medium p-4">ゴールドパートナー</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div class="flex flex-col items-center justify-center gap-2 w-full">
+        <h1 class="text-2xl font-medium sm:p-4 p-10">ゴールドパートナー</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full justify-center sm:justify-between">
           {res.contents.filter((content: any) => content.type === "ゴールド").map((content: any) => (
-            <div class="flex flex-col items-center justify-end">
-              <Image src={content.logo.url + "?fit=clip&w=320"} alt="寄付の取り組み" width="320" height="100" />
+            <div class="flex flex-col items-center justify-end w-[328px] h-[124px] gap-1">
+              <div class="w-[328px] h-[100px] flex items-center justify-center">
+                <Image src={content.logo.url} alt="寄付の取り組み" width="328" height="100" fit="contain"/>
+              </div>
               <p>{content.company}</p>
             </div>
           ))}
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center gap-2">
-        <h1 class="text-2xl font-medium p-4">シルバーパートナー</h1>
-        <div class="grid sm:grid-cols-3 grid-cols-1 gap-8">
+      <div class="flex flex-col items-center justify-center w-full">
+        <h1 class="text-2xl font-medium mt-10">シルバーパートナー</h1>
+        <div class="sm:grid sm:grid-cols-3 flex flex-col items-center justify-center gap-8 w-full sm:justify-between pt-2">
           {res.contents.filter((content: any) => content.type === "シルバー").map((content: any) => (
-            <div class="flex flex-col items-center justify-end">
-              <Image src={content.logo.url + "?fit=clip&w=180"} alt="寄付の取り組み" width="180" height="180" />
+            <div class="flex flex-col items-center justify-end w-[180px] h-[168px] gap-1">
+              <div class="sm:w-[180px] sm:h-[149px] w-[140px] h-[100px] flex items-center justify-center">
+                <Image src={content.logo.url} alt="寄付の取り組み" width="180" height="149" fit="contain" />
+              </div>
               <p>{content.company}</p>
             </div>
           ))}
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center gap-2">
-        <h1 class="text-2xl font-medium p-4">ブロンズパートナー</h1>
-        <div class="grid sm:grid-cols-4 grid-cols-2 gap-4">
+      <div class="flex flex-col items-center justify-center gap-2 w-full">
+        <h1 class="text-2xl font-medium sm:p-4 p-10">ブロンズパートナー</h1>
+        <div class="grid sm:grid-cols-4 grid-cols-2 gap-4 w-full justify-center sm:justify-between">
           {res.contents.filter((content: any) => content.type === "ブロンズ").map((content: any) => (
             <div class="flex flex-col items-center justify-end">
+              <div class="w-[140px] h-[140px] flex items-center justify-center">
               <Image src={content.logo.url + "?fit=clip&w=140"} alt="寄付の取り組み" width="140" height="140" />
+              </div>
               <p>{content.company}</p>
             </div>
           ))}

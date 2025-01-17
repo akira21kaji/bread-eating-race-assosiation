@@ -6,35 +6,41 @@ import staff from "../assets/assosiation/staff.webp"
 import staffSm from "../assets/assosiation/staff_sm.webp"
 import dinosaur from "../assets/assosiation/dinosaur.webp"
 import dinosaurSm from "../assets/assosiation/dinosaur_sm.webp"
-import tamesue from "../assets/assosiation/tamesue.png"
-import kimura from "../assets/assosiation/kimura.png"
+import tamesue from "../assets/assosiation/tamesue.webp"
+import tamesueSm from "../assets/assosiation/sm_tamesue.webp"
+import kimura from "../assets/assosiation/kimura.webp"
+import kimuraSm from "../assets/assosiation/sm_kimura.webp"
 import SubHeader from "../components/layout/SubHeader.astro";
+import Humburger from "../components/component/Humburger.astro";
 ---
 <Layout>
   <SubHeader />
-  <section class="w-full">
+  <Humburger />
+  <section class="w-full mt-24">
     <div class="keyframe flex justify-center items-center bg-cover bg-center w-full h-96">
       <h1 class="text-center text-5xl font-bold text-white tracking-widest">協会について</h1>
     </div>
   </section>
 
-  <section class="flex flex-col items-center sm:py-20 py-10">
+  <section class="flex flex-col items-center mb-[160px]">
       <Title subtitle="MESSAGE" title="ご挨拶"/>
-    <div class="flex flex-col sm:flex-row justify-start sm:gap-10 gap-5 p-0 sm:p-10">
+    <div class="flex flex-col sm:flex-row items-center sm:gap-10 gap-5 sm:p-10">
       <div class="flex flex-col items-start sm:p-10 p-0 sm:px-5">
         <div class="flex items-center gap-2 pb-5">
           <p>会長</p>
           <h2 class="text-2xl font-bold">為末 大</h2>
         </div>
-        <p class="w-96">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキス
-          トテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキス
-          トテキストテキストテキストテキストテキストテキストテキスト
+        <p class="w-[300px] sm:w-[480px]">
+          日本発祥であるぱん食い競走は、「おいしいスポーツ」として人々に親しまれてきました。少し滑稽で、年齢も性別も関係なく勝つ可能性があり、
+          そして終わった後にみんなでぱんを食べながら笑顔が溢れるのが、この競技の特徴です。
+          スポーツの語源はデポルターレといい、気晴らしやあそびを意味していたそうです。厳しいトレーニングを行い優劣を競い合うスポーツもいいですが、
+          気軽に誰にでも楽しめるスポーツもいいものです。いつの日か、ぱん食い競走がオリンピック競技入りすることを目指し、私どもは日夜美味しいスポーツの普及に励んでまいります。
+          いつかあなたの街にぱん食い競走がやってくるかもしれません。そんな時は恥ずかしがらず大きな口でぱんをくわえて走ってください。きっと笑顔が溢れるはずです。
         </p>
       </div>
       <div class="py-10">
-        <Image src={tamesue} alt="会長" width="480" height="300"/>
+        <Image src={tamesue} alt="会長" width="480" height="300" class="hidden sm:block"/>
+        <Image src={tamesueSm} alt="会長" width="340" height="300" class="block sm:hidden"/>
       </div>
     </div>
 
@@ -44,15 +50,20 @@ import SubHeader from "../components/layout/SubHeader.astro";
           <p>副会長</p>
           <h2 class="text-2xl font-bold">木村 光伯</h2>
         </div>
-        <p class="w-96">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキス
-          トテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキス
-          トテキストテキストテキストテキストテキストテキストテキスト
+        <p class="w-[300px] sm:w-[480px]">
+          子どもが笑顔でぱんをくわえてトップでゴールして大人が本気を出して負ける。観てても参加しても勝っても負けても誰もが笑顔になれる。
+          そして、ぱんを笑いながら食べて『おいしい！』と感動する。そんな楽しくて美味しくて人と人が繋がるスポーツイベントがぱん食い競走です。
+          大人からすれば昔、運動会で経験した懐かしい競技であり、子どもからすれば聞いたこともない競技かもしれませんが、
+          誰もが一度見れば簡単に参加できる分かりやすさもあり、年齢、性別、障害あるなしといった全ての垣根がないスポーツでもあります。
+          またぱん食い競走でくわえるあんぱんは、明治のはじめに『西洋のパン』と『日本の酒饅頭』を融合させて生まれました。
+          まさしく文化と文化が垣根を取り払って生まれた食べ物です。
+          私たちはぱん食い競走を通じて、人と人の垣根をなくし、地域の人々がお互いを支え合い、
+          貧困をはじめとした様々な社会課題をなくし、誰しもが笑顔になれるまちづくり、コミュニティづくりに貢献していきたいと思います。
         </p>
       </div>
       <div class="py-10">
-        <Image src={kimura} alt="副会長" width="480" height="300"/>
+        <Image src={kimura} alt="副会長" width="480" height="300" class="hidden sm:block"/>
+        <Image src={kimuraSm} alt="副会長" width="340" height="300" class="block sm:hidden"/>
       </div>
     </div>
   </section>
@@ -68,7 +79,7 @@ import SubHeader from "../components/layout/SubHeader.astro";
         <tbody class="text-left text-white !font-sans">
           <tr>
             <th>団体名</th>
-            <td>一般社団法人  パン食い競走協会 (設立準備中)</td>
+            <td>いっ“ぱん”社団法人  ぱん食い競走協会 (設立準備中)</td>
           </tr>
           <tr>
             <th>設立年</th>
@@ -88,34 +99,37 @@ import SubHeader from "../components/layout/SubHeader.astro";
           </tr>
           <tr>
             <th>活動内容</th>
-            <td>パン食い競走文化の普及と発展</td>
+            <td>ぱん食い競走文化の普及と発展</td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section class="flex flex-col items-center py-10">
-    <Title subtitle="OFFICIAL RULE" title="公式ルール"/>
+  <section class="flex flex-col items-center">
+    <div class="title-container">
+      <p class="subtitle">OFFICIAL RULE</p>
+      <h1 class="title">公式ルール</h1>
+    </div>
 
-    <div class="w-2/3">
+    <div class="w-2/3 pb-[160px]">
       <article class="py-10">
         <h1 class="text-2xl pb-5 relative right-6">レース</h1>
-        <ol class="list-decimal">
-          <li>パン食い競走は全長30mのレースの中間地点にパン食い台を設置し行われる。</li>
-          <li>パン食い台は参加者に合わせて高さを調整される。</li>
-          <li>パン幅は1m50cm以上離さなければならない。</li>
-          <li>パンの重量は50g以上100g以下とする。</li>
+        <ol class="list-decimal marker:text-[16px]">
+          <li>ぱん食い競走は全長30mのレースの中間地点にぱん食い台を設置し行われる。</li>
+          <li>ぱん食い台は参加者に合わせて高さを調整される。</li>
+          <li>ぱん幅は1m50cm以上離さなければならない。</li>
+          <li>ぱんの重量は50g以上100g以下とする。</li>
           <li>縦紐は30cmとする。</li>
         </ol>
       </article>
   
       <article class="py-10">
         <h1 class="text-2xl pb-5 relative right-6">勝敗</h1>
-        <ol class="list-decimal">
+        <ol class="list-decimal marker:text-[16px]">
           <li>トルソー部分が最も先にゴールラインを越えたものから順位をつける。</li>
-          <li>パンをくわえずにゴールした場合、ゴールを無効とする。</li>
-          <li>レースで獲得したパンはレース後に食べ切らなければならない。不食行為が発覚した場合、レース結果は剥奪される。</li>
+          <li>ぱんをくわえずにゴールした場合、ゴールを無効とする。</li>
+          <li>レースで獲得したぱんはレース後に食べ切らなければならない。不食行為が発覚した場合、レース結果は剥奪される。</li>
           <li>トルソー部分が最も先にゴールラインを越えたものから順位をつける。</li>
           <li>スタート音発生0.1秒以内でのスタートはフライングとする。</li>
         </ol>
@@ -137,8 +151,49 @@ import SubHeader from "../components/layout/SubHeader.astro";
     font-weight: 200;
   }
   li {
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 200;
     padding-bottom: 1rem;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    gap:22px;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 640px) {
+    .title-container {
+      width: 280px;
+    }
+  }
+
+  .subtitle {
+    color: #e07e21;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 44px;
+  }
+
+  @media (max-width: 640px) {
+    .title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .subtitle {
+      font-size: 16px;
+    }
   }
 </style>

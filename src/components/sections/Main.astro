@@ -10,51 +10,63 @@ import point3 from "../../assets/points/point3.webp"
 ---
 
 <section class="w-full">
-  <div class="keyframe flex flex-col justify-center items-center bg-cover bg-center w-full h-auto py-32">
+  <div class="keyframe flex flex-col justify-center items-center bg-cover bg-center w-full h-auto py-32 h-[100svh]">
     <MainHeader />
     <div class="flex flex-col items-center">
       <Image src={logo_white} alt="logo" width="270" height="270"/>
-      <h1 class="text-center text-5xl font-bold text-white tracking-widest">
-        <span class="text-2xl">一般社団法人<br></span>
-        <span class="text-4xl">ぱん食い競走協会<br></span>
-        <span class="text-lg relative bottom-4">（設立準備中）</span>
+      <h1 class="text-center text-5xl font-bold text-white tracking-widest leading-tight">
+        <span class="text-2xl font-light">いっ“ぱん”社団法人<br></span>
+        <span class="text-4xl font-normal">ぱん食い競走協会<br></span>
+        <span class="text-base relative bottom-4 font-light">（設立準備中）</span>
       </h1>
     </div>
   </div>
 </section>
 
 <section class="flex flex-col sm:flex-row justify-center items-center sm:p-20 p-5 bg-brown-900 sm:gap-20 gap-10">
-  <div class="flex flex-col gap-4 sm:w-1/2 w-full">
-    <h1 class="text-4xl font-bold text-white">おいしいスポーツで<br>世界が広がる。</h1>
-    <h3 class="text-2xl font-normal text-white border-b-2 border-white pb-4">Tasty Sports, Broadening Your World.</h3>
-    <p class="text-sm text-white">ぱん食い競走協会は、スポーツパンシップに則り、楽しいパン食い競走文化を広め、
-      幸福を世界に広げ、パンを通じて世界と繋がり、世界平和を実現するために設立する。</p>
+  <div class="flex flex-col gap-4 sm:w-1/3 w-full">
+    <h1 class="text-4xl font-bold text-white tracking-widest leading-normal mb-6">おいしいスポーツで<br>世界が広がる。</h1>
+    <h3 class="text-lg font-normal text-white border-b-[1px] border-white pb-4">Tasty Sports, Broadening Your World.</h3>
+    <p class="text-sm text-white leading-relaxed">ぱん食い競走協会は、スポーツぱんシップに則り、楽しいぱん食い競走文化を広め、
+      幸福を世界に広げ、ぱんを通じて世界と繋がり、世界平和を実現するために設立する。</p>
   </div>
-  <div class="sm:w-1/2 w-full">
+  <div class="sm:w-1/3 w-full">
     <Image src={boy} alt="boy" width="480" height="300" class="w-full sm:w-auto"/>
   </div>
 </section>
 
-<section class="flex flex-col items-center sm:p-20 p-5">
+<section class="flex flex-col items-center sm:px-52 px-6">
   <Title subtitle="THE RULE" title="ぱん食い競走のルール" />
-  <article class="flex flex-col sm:flex-row items-center justify-center sm:gap-20 gap-10 sm:p-20 p-5">
-    <div class="sm:w-1/3 w-full gap-10 sm:gap-0">
+  <article class="flex flex-col sm:flex-row items-center justify-center sm:gap-20 gap-10 sm:py-20 p-5">
+    <div class="w-full gap-10 sm:gap-0">
       <Image src={point1} alt="point1" width="300" height="300" class="mb-8 w-full"/>
-      <p class="text-center text-xl sm:text-base">30mのコースの中央15ｍ地点に設置されたぱん食い棒に競技用パンが吊されます。</p>
+      <p class="text-left text-xl sm:text-base leading-loose">30mのコースの中央15ｍ地点に設置されたぱん食い棒に競技用パンが吊されます。</p>
     </div>
-    <div class="sm:w-1/3 w-full gap-10 sm:gap-0">
+    <div class="w-full gap-10 sm:gap-0">
       <Image src={point2} alt="point2" width="300" height="300" class="mb-8 w-full"/>
-      <p class="text-center text-xl sm:text-base">競技者は、中央のぱん食い棒まで走っていき、口のみを使ってパンを掴みます。</p>
+      <p class="text-left text-xl sm:text-base leading-relaxed">競技者は、中央のぱん食い棒まで走っていき、口のみを使ってパンを掴みます。</p>
     </div>
-    <div class="sm:w-1/3 w-full gap-10 sm:gap-0">
+    <div class="w-full gap-10 sm:gap-0">
       <Image src={point3} alt="point3" width="300" height="300" class="mb-8 w-full"/>
-      <p class="text-center text-xl sm:text-base">ぱんをくわえてゴールまで落とさないよう走り抜け、ゴールした時のタイムを競います。</p>
+      <p class="text-left text-xl sm:text-base leading-relaxed">ぱんをくわえてゴールまで落とさないよう走り抜け、ゴールした時のタイムを競います。</p>
     </div>
   </article>
 </section>
 
 <style>
+  @keyframes keyframe {
+    0% {
+      background-image: url(../../assets/kv/main_bg_image1.webp);
+    }
+    50% {
+      background-image: url(../../assets/kv/main_bg_image2.webp);
+    }
+    100% {
+      background-image: url(../../assets/kv/main_bg_image1.webp);
+    }
+  }
+
   .keyframe {
-    background-image: url(../../assets/kv/mv_bgimage.webp);
+    animation: keyframe 15s infinite;
   }
 </style>

@@ -17,8 +17,7 @@ import Title from "../component/Title.astro";
 import "../../styles/global.css";
 ---
 
-<div class="sm:flex justify-center hidden">
-
+<div class="sm:flex justify-center hidden sm:px-52 p-5">
   <div class="flex flex-col items-center container">
     <Title subtitle="THE HISTORY" title="ぱん食い競走の歴史" />
 
@@ -77,20 +76,20 @@ import "../../styles/global.css";
 
     <article class="flex justify-center">
       <div class="flex flex-1 items-start text-base">
-        <p class="max-w-[380px] font-extralight">
+        <p class="max-w-[380px] font-extralight relative right-10">
           木村屋總本店と元陸上400mハードルの為末大が出会い、ぱん食い競走の普及と健全な体力づくりの推進を目的に「ぱん食い競走協会」を設立。協会ではパンの種類や安全基準の見直し、イベントの全国展開を図る新たな取り組みが始まる。
         </p>
       </div>
       <div class="relative bottom-24">
         <Image src={Image2024} alt="2024" class="h-auto" />
       </div>
-      <div class="flex flex-1 justify-end items-end">
+      <div class="flex flex-1 justify-end items-end z-10 relative bottom-9">
         <Image src={Reiwa} alt="令和" class=""/>
       </div>
     </article>
 
     <article class="w-full flex justify-center mb-16">
-      <Image src={BreadImage} alt="写真" class="h-auto" />
+      <Image src={BreadImage} alt="写真" class="h-auto relative bottom-24" />
     </article>
   </div>
 

@@ -1,16 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/brown_logo.svg";
 ---
 
-<header class="hidden sm:flex justify-between items-center w-full h-24">
-  <div class="pl-16">
-    <a href="/" class="flex items-center gap-4">
-      <Image src={logo} alt="logo" class="w-16 h-16"/>
-      <h1 class="text-left text-lg font-bold tracking-wider">一般社団法人<br>パン食い競走協会<span class="text-xs font-normal tracking-wider">(設立準備中)</span></h1>
+<header class="sub-header sm:flex justify-between items-center w-full fixed top-0 left-0 h-24 z-10 hidden ">
+  <div class="sm:pl-16 pl-4">
+    <a href="/" class="flex items-center sm:gap-4 gap-2">
+      <Image src={logo} alt="logo" class="sm:w-16 sm:h-16 w-12 h-12"/>
+      <h1 class="text-left sm:text-lg text-sm font-bold tracking-wider">いっ“ぱん”社団法人<br>ぱん食い競走協会<span class="sm:text-xs text-[10px] font-normal tracking-wider">&nbsp;(設立準備中)</span></h1>
     </a>
   </div>
-  <div class="flex items-center gap-4 pr-20">
+  <div class="nav-menu flex items-center gap-4 pr-20 ">
     <a href="/about" class="text-sm font-bold tracking-wide">協会について</a>
     <p>|</p>
     <a href="/rule" class="text-sm font-bold tracking-wide">開催までの流れ</a>
@@ -18,3 +18,10 @@ import logo from "../../assets/logo.svg";
     <a href="/contact" class="text-sm font-bold tracking-wide">お問い合わせ</a>
   </div>
 </header>
+
+<style>
+  .sub-header {
+    background-color: #FFF3E2;
+  }
+
+</style>

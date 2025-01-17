@@ -5,15 +5,65 @@ import Sponsors from "../../assets/contact/スポンサーの方はこちら.svg
 import Donations from "../../assets/contact/主催者の方はこちら.svg"
 ---
 <section>
-  <article class="flex flex-col items-center justify-center my-24">
-    <Title subtitle="CONTACT" title="お問い合わせ" />
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-10 p-4">
-      <a href="/kamon-crest.co.jp" target="_blank">
+  <article class="flex flex-col items-center justify-center" id="contact">
+    <div class="title-container">
+  <p class="subtitle">CONTACT</p>
+  <h1 class="title">お問い合わせ</h1>
+</div>
+
+
+<div class="flex flex-col sm:flex-row items-center justify-center gap-10 p-4 pb-[160px]">
+      <a href="https://forms.gle/119C5hrnbowFmN3F9" target="_blank">
         <Image src={Sponsors} alt="スポンサーの方はこちら" width="510" height="210"/>
       </a>
-      <a href="/kamon-crest.co.jp" target="_blank">
+      <a href="https://forms.gle/25nujXW3jpTRWezA6" target="_blank">
         <Image src={Donations} alt="主催者の方はこちら" width="510" height="210"/>
       </a>
     </div>
   </article>
 </section>
+
+
+<style>
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    gap:22px;
+    margin-top: 160px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 640px) {
+    .title-container {
+      width: 280px;
+    }
+  }
+
+  .subtitle {
+    color: #e07e21;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 44px;
+  }
+
+  @media (max-width: 640px) {
+    .title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .subtitle {
+      font-size: 16px;
+    }
+  }
+</style>
