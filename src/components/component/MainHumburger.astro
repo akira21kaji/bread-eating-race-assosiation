@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 import logo from "../../assets/brown_logo.svg";
 
 ---
-<header class="sm:hidden flex header">
+<header class="header">
   <div class="navtext-container">
-    <a href="/" class="">
+    <a href="#" class="">
       <Image src={logo} alt="logo" class="sm:w-16 sm:h-16 w-12 h-12"/>
     </a>
   </div>
@@ -22,6 +22,10 @@ import logo from "../../assets/brown_logo.svg";
 <style>
 /* Navbar & Navmenu color */
 :root {
+  --background-navbar: none;
+}
+
+.header.scrolled {
   --background-navbar: #FFF3E2;
 }
 
@@ -68,16 +72,20 @@ import logo from "../../assets/brown_logo.svg";
   transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
 }
 
-/* Hamburger menbu text */
+/* Hamburger menu text */
 .menu a {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 2px;
   font-size: 16px;
   text-transform: capitalize;
-  color: #4d3a3f;
+  color: #fff;
   opacity: 0;
   transition: 0.5s;
+}
+
+.menu.scrolled a {
+  color: #4d3a3f;
 }
 
 .menu li {
@@ -107,13 +115,17 @@ import logo from "../../assets/brown_logo.svg";
 }
 
 .navicon {
-  background: #4d3a3f;
+  background: #fff;
   display: block;
   height: 3px;
   width: 26px;
   position: relative;
   transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   z-index: 10;
+}
+
+.navicon.scrolled {
+  background: #4d3a3f;
 }
 
 .navicon:before,
@@ -123,15 +135,20 @@ import logo from "../../assets/brown_logo.svg";
   height: 100%;
   width: 100%;
   position: absolute;
-  background: #4d3a3f;
+  background: #fff;
   transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
 }
 
-.navicon:before {
+.navicon.scrolled::before,
+.navicon.scrolled::after {
+  background: #4d3a3f;
+}
+
+.navicon::before {
   top: 9px;
 }
 
-.navicon:after {
+.navicon::after {
   bottom: 9px;
 }
 
@@ -164,9 +181,13 @@ import logo from "../../assets/brown_logo.svg";
   position: absolute;
   left: 10px;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+}
+
+.navtext-container.scrolled {
+  display: flex;
 }
 
 /* Navbar Text */
@@ -178,3 +199,24 @@ import logo from "../../assets/brown_logo.svg";
   font-size: 20px;
 }
 </style>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.header');
+    const menu = document.querySelector('.menu');
+    const logo = document.querySelector('.navtext-container');
+    const navicon = document.querySelector('.navicon');
+    
+    if (window.scrollY > this.window.innerHeight) {
+      navbar?.classList.add('scrolled');
+      menu?.classList.add('scrolled');
+      logo?.classList.add('scrolled');
+      navicon?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+      menu?.classList.remove('scrolled');
+      logo?.classList.remove('scrolled');
+      navicon?.classList.remove('scrolled');
+    }
+  })
+</script>
