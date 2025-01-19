@@ -17,13 +17,13 @@ import Title from "../component/Title.astro";
 import "../../styles/global.css";
 ---
 
-<div class="sm:flex justify-center hidden sm:px-52 p-5">
+<div class="sm:flex justify-center hidden sm:px-20 ">
   <div class="flex flex-col items-center container">
     <Title subtitle="THE HISTORY" title="ぱん食い競走の歴史" />
 
     <article class="flex justify-center">
       <div class="flex flex-1 flex-col items-end justify-center">
-        <Image src={Meiji} alt="明治" class="relative right-28 top-10"/>
+        <Image src={Meiji} alt="明治" class="relative right-28 top-10 -z-10"/>
         <Image src={MeijiImage} alt="明治のぱん食い競走の風景" class=""/>
       </div>
       <div>
@@ -38,19 +38,19 @@ import "../../styles/global.css";
 
     <article class="flex justify-center">
       <div class="flex flex-1 items-center justify-start text-base">
-        <p class="relative bottom-24 left-10 font-extralight max-w-[380px]">
+        <p class="relative bottom-24 left-10 font-extralight max-w-[380px] -z-10">
           北海道札幌農学校（現・北海道大学）で「食菓競争」としてぱん食い競走が行われる。木村屋總本店のあんぱんが使われていたと伝えられ、これも起源の一つに位置付けられる。
         </p>
       </div>
-      <div class="flex flex-1 flex-col items-center z-10">
+      <div class="flex flex-1 flex-col items-center">
         <Image src={Image1896} alt="1896" class="h-auto" />
         <Image src={Image1926} alt="1926" class="h-auto" />
       </div>
       <div class="flex flex-1 flex-col justify-end">
-        <Image src={ShowaImage} alt="昭和のぱん食い競争の風景" class="relative bottom-24"/>
+        <Image src={ShowaImage} alt="昭和のぱん食い競争の風景" class="relative bottom-24 -z-10"/>
         <div class="flex flex-col relative bottom-28 right-28">
-          <Image src={Showa} alt="昭和" class="pl-2 pb-4"/>
-          <p class="text-base font-extralight max-w-[380px]">
+          <Image src={Showa} alt="昭和" class="pl-2 pb-4 -z-10"/>
+          <p class="text-base font-extralight max-w-[380px] -z-10">
             戦後、学校行事や地域イベントとして広まり、定番競技に。木村屋のあんぱんは庶民に親しまれ、ぱん食い競走の代表的な競技アイテムとなった。
           </p>
         </div>
@@ -60,14 +60,14 @@ import "../../styles/global.css";
     <article class="flex justify-center"> 
       <div class="flex flex-1 flex-col items-end relative bottom-14">
         <div class="flex flex-col items-start">
-          <Image src={Heisei} alt="平成" class=""/>
-          <p class="max-w-[380px] text-base font-extralight">
+          <Image src={Heisei} alt="平成" class="-z-10"/>
+          <p class="max-w-[380px] text-base font-extralight relative bottom-4 -z-10">
             アレルギーや衛生面の観点から包装済みぱんの使用が増加し、地域や学校で独自のぱんが用意されるケースも増える。
           </p>
         </div>
       </div>
       <div>
-        <Image src={Image2000} alt="2000" class="h-auto relative bottom-12" />
+        <Image src={Image2000} alt="2000" class="h-auto relative bottom-12 -z-10" />
       </div>
       <div class="flex flex-1 justify-end">
         <Image src={HeiseiImage} alt="平成のぱん食い競争の風景" />
@@ -76,20 +76,20 @@ import "../../styles/global.css";
 
     <article class="flex justify-center">
       <div class="flex flex-1 items-start text-base">
-        <p class="max-w-[380px] font-extralight relative right-10">
+        <p class="max-w-[480px] font-extralight">
           木村屋總本店と元陸上400mハードルの為末大が出会い、ぱん食い競走の普及と健全な体力づくりの推進を目的に「ぱん食い競走協会」を設立。協会ではぱんの種類や安全基準の見直し、イベントの全国展開を図る新たな取り組みが始まる。
         </p>
       </div>
-      <div class="relative bottom-24">
-        <Image src={Image2024} alt="2024" class="h-auto" />
+      <div class="relative bottom-24 -z-10">
+        <Image src={Image2024} alt="2024" class="h-auto"/>
       </div>
-      <div class="flex flex-1 justify-end items-end z-10 relative bottom-9">
-        <Image src={Reiwa} alt="令和" class=""/>
+      <div class="flex flex-1 justify-end items-end relative bottom-5">
+        <Image src={Reiwa} alt="令和" class="-z-10"/>
       </div>
     </article>
 
     <article class="w-full flex justify-center mb-16">
-      <Image src={BreadImage} alt="写真" class="h-auto relative bottom-24" />
+      <Image src={BreadImage} alt="写真" class="h-auto relative bottom-20 -z-10" />
     </article>
   </div>
 

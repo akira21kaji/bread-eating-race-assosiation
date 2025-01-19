@@ -4,16 +4,16 @@ import { getDonationPhoto } from "../../lib/microcms";
 const res = await getDonationPhoto();
 ---
 
-<div class="swiper2">
-  <div class="swiper-wrapper max-w-[300px] sm:max-w-[1040px] pb-10">
-    {res.images.map((image: any) => (
-      <div class="swiper-slide">
-        <Image src={image.url + "?w=350&h=350&fit=crop"} alt="寄付の取り組み" width={350} height={350}/>
-      </div>
-    ))}
+  <div class="swiper2">
+    <div class="swiper-wrapper max-w-[300px] sm:max-w-[1040px] pb-10">
+      {res.images.map((image: any) => (
+        <div class="swiper-slide">
+          <Image src={image.url + "?w=350&h=350&fit=crop"} alt="寄付の取り組み" width={350} height={350} class="-z-10"/>
+        </div>
+      ))}
+    </div>
+    <div class="swiper-scrollbar max-w-[350px] !left-1/2 transform !-translate-x-1/2"></div>
   </div>
-  <div class="swiper-scrollbar max-w-[350px] !left-1/2 transform !-translate-x-1/2"></div>
-</div>
 
 <style>
   .swiper-scrollbar {

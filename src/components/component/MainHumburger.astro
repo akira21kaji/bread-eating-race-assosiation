@@ -12,6 +12,7 @@ import logo from "../../assets/brown_logo.svg";
   <input type="checkbox" class="menu-btn" id="menu-btn">
   <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
   <ul class="menu">
+    <li class="home"><a href="/">ホーム</a></li>
     <li class="about"><a href="/about">協会について</a></li>
     <li class="rule"><a href="/rule">開催までの流れ</a></li>
     <li class="contact"><a href="/#contact">お問い合わせ</a></li>
@@ -39,7 +40,7 @@ import logo from "../../assets/brown_logo.svg";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 999;
 }
 
 @media (min-width: 640px) {
@@ -53,7 +54,7 @@ import logo from "../../assets/brown_logo.svg";
   list-style: none;
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100svh;
   top: 0;
   right: 0;
   margin-top: 72px;
@@ -70,6 +71,13 @@ import logo from "../../assets/brown_logo.svg";
   transform: scale(1, 1);
   transform-origin: right;
   transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.menu-btn:checked ~ .menu.scrolled {
+  background-color: #FFF3E2;
+  opacity: 1;
 }
 
 /* Hamburger menu text */
@@ -89,7 +97,7 @@ import logo from "../../assets/brown_logo.svg";
 }
 
 .menu li {
-  border-top: 1px solid rgb(75, 75, 75);
+  border-bottom: 1px solid #d9d9d9;
   padding: 15px 0;
   margin: 0 54px;
   opacity: 0;
@@ -206,17 +214,20 @@ import logo from "../../assets/brown_logo.svg";
     const menu = document.querySelector('.menu');
     const logo = document.querySelector('.navtext-container');
     const navicon = document.querySelector('.navicon');
+    const menuBtnChecked = document.querySelector('.menu-btn:checked ~ .menu');
     
     if (window.scrollY > this.window.innerHeight) {
       navbar?.classList.add('scrolled');
       menu?.classList.add('scrolled');
       logo?.classList.add('scrolled');
       navicon?.classList.add('scrolled');
+      menuBtnChecked?.classList.add('scrolled');
     } else {
       navbar?.classList.remove('scrolled');
       menu?.classList.remove('scrolled');
       logo?.classList.remove('scrolled');
       navicon?.classList.remove('scrolled');
+      menuBtnChecked?.classList.remove('scrolled');
     }
   })
 </script>

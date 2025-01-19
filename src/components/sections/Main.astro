@@ -1,19 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import logo_white from "../../assets/kv/logo_white.svg"
-import MainHeader from "../layout/MainHeader.astro";
 import boy from "../../assets/kv/boy_run.webp"
 import Title from "../component/Title.astro";
-import point1 from "../../assets/points/point1.webp"
+import point12 from "../../assets/points/point1-2.webp"
 import point2 from "../../assets/points/point2.webp"
 import point3 from "../../assets/points/point3.webp"
-import MainHumburger from "../component/MainHumburger.astro";
 ---
 
 <section class="w-full">
-  <div class="keyframe flex flex-col justify-center items-center bg-cover bg-center w-full h-auto py-32 h-[100svh]">
-    <MainHeader />
-    <MainHumburger />
+  <div class="keyframe flex flex-col justify-center items-center bg-cover bg-center w-full  py-32 h-[100svh]">
     <div class="flex flex-col items-center">
       <Image src={logo_white} alt="logo" width="270" height="270"/>
       <h1 class="text-center text-5xl font-bold text-white tracking-widest leading-tight">
@@ -25,9 +21,9 @@ import MainHumburger from "../component/MainHumburger.astro";
   </div>
 </section>
 
-<section class="flex flex-col sm:flex-row justify-center items-center sm:p-20 p-5 bg-brown-900 sm:gap-20 gap-10">
-  <div class="flex flex-col gap-4 sm:w-1/3 w-full">
-    <h1 class="text-4xl font-bold text-white tracking-widest leading-normal mb-6">おいしいスポーツで<br>世界が広がる。</h1>
+<section class="flex flex-col sm:flex-row justify-center items-center sm:p-20 py-[120px] px-5 bg-brown-900 sm:gap-20 gap-10">
+  <div class="flex flex-col gap-4 sm:w-1/3 w-[305px]">
+    <h1 class="sm:text-4xl text-3xl font-bold text-white tracking-widest leading-normal mb-6">おいしいスポーツで<br>世界が広がる。</h1>
     <h3 class="text-lg font-normal text-white border-b-[1px] border-white pb-4">Tasty Sports, Broadening Your World.</h3>
     <p class="text-sm text-white leading-relaxed">ぱん食い競走協会は、スポーツぱんシップに則り、楽しいぱん食い競走文化を広め、
       幸福を世界に広げ、ぱんを通じて世界と繋がり、世界平和を実現するために設立する。</p>
@@ -37,11 +33,11 @@ import MainHumburger from "../component/MainHumburger.astro";
   </div>
 </section>
 
-<section class="flex flex-col items-center sm:px-52 px-6">
+<section class="flex flex-col items-center sm:px-20 px-5">
   <Title subtitle="THE RULE" title="ぱん食い競走のルール" />
-  <article class="flex flex-col sm:flex-row items-center justify-center sm:gap-20 gap-10 sm:py-20 p-5">
+  <article class="flex flex-col sm:flex-row items-start justify-center sm:gap-20 gap-10 ">
     <div class="w-full gap-10 sm:gap-0">
-      <Image src={point1} alt="point1" width="300" height="300" class="mb-8 w-full"/>
+      <Image src={point12} alt="point1" width="300" height="300" class="mb-8 w-full"/>
       <p class="text-left text-xl sm:text-base leading-loose">30mのコースの中央15ｍ地点に設置されたぱん食い棒に競技用ぱんが吊されます。</p>
     </div>
     <div class="w-full gap-10 sm:gap-0">

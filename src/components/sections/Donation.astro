@@ -4,7 +4,7 @@ import DonationCarousel from "../component/DonationCarousel.astro";
 ---
 
 <div class="donation-container">
-  <article class="flex flex-col items-center justify-center pb-20">
+  <article class="flex flex-col items-center justify-center pb-[160px] px-5">
     <div class="title-container">
       <p class="subtitle">DONATION</p>
       <h1 class="title">寄付の取り組み</h1>
@@ -34,6 +34,14 @@ import DonationCarousel from "../component/DonationCarousel.astro";
     margin-top: 160px;
     margin-bottom: 40px;
     gap: 22px;
+  }
+
+  @media (max-width: 640px) {
+    .title-container {
+      width: 280px;
+      margin-top: 120px;
+      margin-bottom: 64px;
+    }
   }
 
   .subtitle {

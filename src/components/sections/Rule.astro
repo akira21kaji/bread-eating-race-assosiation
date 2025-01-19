@@ -3,8 +3,128 @@ import { Image } from "astro:assets";
 import SportsPanShip from "../../assets/rule_assets/sports_pan_ship.svg";
 ---
 
-<div class="flex w-full justify-center items-center sm:pt-36 sm:px-52 p-5">
-  <article class="w-420">
+<div class="flex w-full justify-center items-center pt-[160px] sm:pb-[160px] pb-[20px]">
+  <article class="w-420 hidden sm:block">
     <Image src={SportsPanShip} alt="スポーツぱんシップ宣言"/>
   </article>
+  <div class="sm:hidden flex flex-col justify-center items-center px-5">
+    <hr class="style1">
+    <hr class="style2">
+    <div class="flex flex-col justify-center items-center py-[40px]">
+      <h1 class="pan-title">スポーツぱんシップ宣言</h1>
+      <p class="pan-sub-title">THE DECLARATION OF SPORTS PANSHIP</p>
+      <div class="flex flex-col justify-center items-center gap-8">
+        <div class="pan-ship-box">
+          <div class="pan-number">1.</div>
+          <div class="pan-text-box">
+            <div class="pan-text">全てのプレイヤーは、<br>ぱんの元に平等である。</div>
+            <p class="pan-sub-text">All players are equal under the bread.</p>
+          </div>
+        </div>
+        <div class="pan-ship-box">
+          <div class="pan-number">2.</div>
+          <div class="pan-text-box">
+            <div class="pan-text">どのようなぱんであれ、<br>ぱんはぱんである。</div>
+            <p class="pan-sub-text">A bread is a bread, no matter its type.</p>
+          </div>
+        </div>
+        <div class="pan-ship-box">
+          <div class="pan-number">3.</div>
+          <div class="pan-text-box">
+            <div class="pan-text">プレイヤーたるもの、一度くわえたぱんは<br>食べ切らなければならない。</div>
+            <p class="pan-sub-text">As players, one must finish any bread once bitten.</p>
+          </div>
+        </div>
+        <div class="pan-ship-box">
+          <div class="pan-number">4.</div>
+          <div class="pan-text-box">
+            <div class="pan-text">叩き練られた経験を持つ人ほど強いように、叩き練られた生地でできたぱんほど美味しい。</div>
+            <p class="pan-sub-text">Just as those who have been tested and shaped grow stronger, bread that has been kneaded and baked to perfection is the most delicious.</p>
+          </div>
+        </div>
+        <div class="pan-ship-box">
+          <div class="pan-number">5.</div>
+          <div class="pan-text-box">
+            <div class="pan-text">最も強いのはぱんを分け与えるものである。</div>
+            <p class="pan-sub-text">The strongest among us is the one who shares their bread with others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="style2">
+    <hr class="style1">
+    <span></span>
+  </div>
 </div>
+
+<style>
+  .pan-title {
+    font-size: 28px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .pan-sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 33px;
+  }
+
+  .style1 {
+    border-bottom: 3px solid #4D3A3F;
+    border-color: #4D3A3F;
+    width: 100%;
+    padding: 0px 5px;
+    margin: 10px 0;
+  }
+  .style2 {
+    border-bottom: 1px solid #4D3A3F;
+    border-color: #4D3A3F;
+    width: 335px;
+  }
+  .pan-ship-box {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .pan-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .pan-list {
+    padding: 0;
+    margin: 0;
+    list-style-position: outside;
+  }
+
+  .pan-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4D3A3F;
+    margin-right: 12px;
+  }
+  
+  .pan-text {
+    font-size: 14px;
+    font-weight: 600;
+    width: 270px;
+    text-align: left;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 600;
+    width: 270px;
+    text-align: left;
+    line-height: 1.5;
+  }
+</style>
