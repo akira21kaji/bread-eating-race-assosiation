@@ -8,6 +8,7 @@ const res = await getPartnerContents();
   <section class="flex flex-col items-center justify-center sm:px-0 px-5">
     <Title subtitle="PARTNERSHIP" title="パートナーシップ" />
     <article class="flex flex-col items-center justify-center gap-12">
+      {res.contents.filter((content: any) => content.type === "ゴールド").length > 0 && (
       <div class="flex flex-col items-center justify-center w-full gap-10">
         <h1 class="text-2xl font-medium ">ゴールドパートナー</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full justify-center sm:justify-between items-start">
@@ -21,6 +22,8 @@ const res = await getPartnerContents();
           ))}
         </div>
       </div>
+      )}
+      {res.contents.filter((content: any) => content.type === "シルバー").length > 0 && (
       <div class="flex flex-col items-center justify-center w-full gap-10">
         <h1 class="text-2xl font-medium">シルバーパートナー</h1>
         <div class="sm:grid sm:grid-cols-3 flex flex-col items-center justify-center gap-8 w-full sm:justify-between">
@@ -32,8 +35,10 @@ const res = await getPartnerContents();
               <p>{content.company}</p>
             </div>
           ))}
+          </div>
         </div>
-      </div>
+      )}
+      {res.contents.filter((content: any) => content.type === "ブロンズ").length > 0 && (
       <div class="flex flex-col items-center justify-center w-full gap-10">
         <h1 class="text-2xl font-medium">ブロンズパートナー</h1>
         <div class="grid sm:grid-cols-4 grid-cols-2 gap-4 w-full justify-center sm:justify-between">
@@ -47,6 +52,7 @@ const res = await getPartnerContents();
           ))}
         </div>
       </div>
+      )}
     </article>
   </section>
 </div>
