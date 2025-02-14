@@ -1,0 +1,49 @@
+---
+import Title from "../component/Title.astro";
+import { Image } from "astro:assets";
+import Nippn from "../../assets/sponsored/nippn_logo.webp";
+import Hashimoto from "../../assets/sponsored/hashimoto_logo.webp";
+---
+<div>
+  <section class="flex flex-col items-center justify-center sm:px-0 px-5">
+    <Title subtitle="PARTNERSHIP" title="パートナーシップ" />
+    <article class="flex flex-col items-center justify-center gap-12">
+
+      <div class="flex flex-col items-center justify-center w-full gap-10">       
+        <h1 class="text-2xl font-semibold ">ゴールドパートナー</h1>
+        <div class="flex items-center justify-center">
+            <div class="flex flex-col items-center justify-end w-[328px] h-[124px] gap-1">
+              <div class="w-[328px] h-[100px] flex items-center justify-center">
+                <Image src={Nippn} alt="寄付の取り組み" width="328" height="100" fit="contain"/>
+              </div>
+              <p>株式会社ニップン様</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center w-full gap-10">
+        <h1 class="text-2xl font-semibold">シルバーパートナー</h1>
+        <div class="flex items-center justify-center">
+            <div class="flex flex-col items-center justify-end w-[180px] h-[168px] gap-1">
+              <div class="sm:w-[180px] sm:h-[149px] w-[140px] h-[100px] flex items-center justify-center">
+                <Image src={Hashimoto} alt="寄付の取り組み" width="180" height="149" fit="contain" />
+              </div>
+              <p>橋本食糧工業株式会社</p>
+            </div>
+          </div>
+        </div>
+
+      <!-- <div class="flex flex-col items-center justify-center w-full gap-10">
+        <h1 class="text-2xl font-medium">ブロンズパートナー</h1>
+        <div class="grid sm:grid-cols-4 grid-cols-2 gap-4 w-full justify-center sm:justify-between">
+            <div class="flex flex-col items-center justify-end">
+              <div class="w-[140px] h-[140px] flex items-center justify-center">
+              <Image src={} alt="寄付の取り組み" width="140" height="140" />
+              </div>
+              <p></p>
+            </div>
+        </div>
+      </div> -->
+    </article>
+  </section>
+</div>
