@@ -48,7 +48,7 @@ export const getPastEventPhoto = async (queries?: MicroCMSQueries) => {
 
 export const getDonationPhoto = async (queries?: MicroCMSQueries) => {
   return await client.getListDetail<pastEventPhoto>({
-    endpoint: "donation-photo",
+    endpoint: "past-event-photo",
     contentId: "donation",
     queries,
   });
