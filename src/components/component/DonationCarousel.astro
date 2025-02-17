@@ -5,9 +5,9 @@ const res = await getDonationPhoto();
 ---
 
   <div class="swiper2">
-    <div class="swiper-wrapper max-w-[300px] sm:max-w-[1040px] pb-10 -z-10">
+    <div class="swiper-wrapper max-w-[300px] sm:max-w-[1040px] pb-10">
       {res.images.map((image: any) => (
-        <div class="swiper-slide -z-10">
+        <div class="swiper-slide">
           <Image src={image.url + "?w=350&h=350&fit=crop"} alt="寄付の取り組み" width={350} height={350}/>
         </div>
       ))}
