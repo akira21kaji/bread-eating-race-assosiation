@@ -7,7 +7,7 @@ import Carousel from "../component/Carousel.astro";
 const res = await getPastEvents();
 ---
 <div class="flex justify-center w-full sm:px-20 px-5">
-  <section class="flex flex-col items-center justify-center">
+  <section class="flex flex-col items-center justify-center -z-11">
     <Title subtitle="PAST EVENT" title="開催実績" />
     <div class="flex flex-col justify-start items-center sm:max-w-[1040px] sm:max-h-[740px] max-h-[580px] overflow-y-scroll gap-8">
       {res.contents.map((content: any) => (
@@ -40,7 +40,7 @@ const res = await getPastEvents();
         </div>
       ))}
     </div>
-    <div class="sm:py-[160px] py-[120px] -z-10">
+    <div class="sm:py-[160px] py-[120px] -z-5">
       <Carousel />
     </div>
   </section>

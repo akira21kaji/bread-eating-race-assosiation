@@ -12,22 +12,14 @@ const res = await getDonationPhoto();
         </div>
       ))}
     </div>
-    <div class="swiper-scrollbar max-w-[350px] !left-1/2 transform !-translate-x-1/2"></div>
+    <div class="swiper-scrollbar sm:max-w-[350px] max-w-[300px] !left-1/2 transform !-translate-x-1/2"></div>
   </div>
-
-<style>
-  .swiper-scrollbar {
-    position: relative;
-    --swiper-scrollbar-drag-bg-color: #E17A19 !important;
-    --swiper-scrollbar-bg-color: #FFF !important;
-  }
-</style>
-
-<script>
+  
+  <script>
   import Swiper from "swiper";
   import { Scrollbar } from "swiper/modules";
   import "swiper/css/bundle";
-
+  
   export const swiperConfig =  {
     cssMode: true,
     slidesPerView: 1,
@@ -45,6 +37,14 @@ const res = await getDonationPhoto();
       },
     },
   };
-
+  
   const swiper2 = new Swiper(".swiper2", swiperConfig)
 </script>
+
+<style>
+  .swiper-scrollbar {
+    position: relative;
+    --swiper-scrollbar-drag-bg-color: #E17A19 !important;
+    --swiper-scrollbar-bg-color: #FFF !important;
+  }
+</style>
