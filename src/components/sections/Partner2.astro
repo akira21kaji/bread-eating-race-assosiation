@@ -2,10 +2,8 @@
 import Title from "../component/Title.astro";
 import { Image } from "astro:assets";
 import Nippn from "../../assets/sponsored/nippn_logo.webp";
-import Hashimoto from "../../assets/sponsored/hashimoto_logo.webp";
-import Hashimoto2 from "../../assets/sponsored/hashimoto_logo2.webp";
-import Hashimoto3 from "../../assets/sponsored/hashimoto_logo3.webp";
 import Hashimoto4 from "../../assets/sponsored/hashimoto_logo4.webp";
+import Okatsune from "../../assets/sponsored/okatsune_logo.webp";
 ---
 <div>
   <section class="flex flex-col items-center justify-center sm:px-0 px-5">
@@ -38,12 +36,18 @@ import Hashimoto4 from "../../assets/sponsored/hashimoto_logo4.webp";
 
       <div class="flex flex-col items-center justify-center w-full gap-10">
         <h1 class="text-2xl font-medium">ブロンズパートナー</h1>
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center gap-10">
             <div class="flex flex-col items-center justify-end gap-4">
               <div class="w-[140px] h-[140px] flex items-center justify-center pb-2">
               <Image src={Hashimoto4} alt="寄付の取り組み" width="140" height="140" />
               </div>
               <p>橋本食糧工業株式会社</p>
+            </div>
+            <div class="flex flex-col items-center justify-end gap-4">
+              <div class="w-[140px] h-[140px] flex items-center justify-center pb-2">
+              <Image src={Okatsune} alt="寄付の取り組み" width="140" height="140" />
+              </div>
+              <p>岡常製糖株式会社</p>
             </div>
         </div>
       </div>
