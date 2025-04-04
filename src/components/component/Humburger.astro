@@ -15,7 +15,7 @@ import logo from "../../assets/brown_logo.svg";
     <li class="home"><a href="/">ホーム</a></li>
     <li class="about"><a href="/about">協会について</a></li>
     <li class="rule"><a href="/rule">開催までの流れ</a></li>
-    <li class="contact"><a href="#contact">お問い合わせ</a></li>
+    <li class="contact"><a href="/" class="scroll-to-contact">お問い合わせ</a></li>
   </ul>
 
 </header>
@@ -179,3 +179,21 @@ import logo from "../../assets/brown_logo.svg";
   font-size: 20px;
 }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactLinks = document.querySelectorAll('.scroll-to-contact');
+    
+    contactLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.location.pathname === '/') {
+          e.preventDefault();
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  });
+</script>
