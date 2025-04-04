@@ -26,3 +26,17 @@ import Partner2 from '../components/sections/Partner2.astro';
 	<Partner2 />
 	<Contact />
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('scroll') === 'contact') {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        // URLからパラメータを削除
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+  });
+</script>
